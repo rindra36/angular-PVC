@@ -1,0 +1,17 @@
+<div class="container">
+    <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
+        <thead>
+            <tr>
+                <th class="mdl-data-table__cell--non-numeric"></th>
+                <th *ngFor="let number of createRange(nbVille)">{{number}}</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let number of createRange(nbVille)">
+                <th class="mdl-data-table__cell--non-numeric">{{number}}</th>
+                <td *ngFor="let number of createRange(nbVille)">1</td>
+            </tr>
+        </tbody>
+    </table>
+    <button mat-raised-button color="accent">Résoudre</button>
+</div>

@@ -1,0 +1,14 @@
+<div class="container">
+  <mat-card>
+    <mat-form-field>
+      <input matInput placeholder="Nombre de ville" type="number" min="2" [formControl]="nbVilleControl" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="nbVilleControl.hasError('min')">
+        Nombre de ville doit être supérieur ou égal à 2.
+      </mat-error>
+      <mat-error *ngIf="nbVilleControl.hasError('required')" >
+        Nombre de ville est requis.
+      </mat-error>
+    </mat-form-field>
+    <button mat-raised-button color="accent" [disabled]="!getControl()" (click)="isClickable()" routerLink="/resolve">Valider</button>
+  </mat-card>
+</div>
